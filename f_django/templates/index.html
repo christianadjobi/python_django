@@ -1,0 +1,51 @@
+{% extends "source.html" %}
+{% load static %}
+{% block title %}SPORTFLSH{% endblock %} 
+
+ {% block body %}
+ <!-- Card Dark -->
+<div class="card">
+
+  <!-- Card image -->
+  <div class="view overlay">
+    <img class="card-img-top" src="{% static 'img/pari.jpg'%}" alt="Card image cap">
+    <a>
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body elegant-color white-text rounded-bottom">
+
+    <!-- Social shares button -->
+    <a class="activator waves-effect mr-4"><i class="fas fa-share-alt white-text"></i></a>
+    <!-- Title -->
+    <h4 class="card-title">parier</h4>
+    <hr class="hr-light">
+    <!-- Text -->
+    <p class="card-text white-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <!-- Link -->
+    <a href="{% url 'projet_nan:football' %}" class="white-text d-flex justify-content-end"><h5>MATCH DU JOUR <i class="fas fa-angle-double-right"></i></h5></a>
+
+  </div>
+
+</div>
+<!-- Card Dark -->
+  {% endblock %}
+
+
+
+  {% block pub %}
+       <div class="embed-responsive embed-responsive-16by9 mb-4">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/UrA0CtEQciQ"
+          allowfullscreen></iframe>
+        </div>  
+
+         <div class="embed-responsive embed-responsive-16by9">
+          <img class="embed-responsive-item" src="http://www.lesurfgagnant.com/images/stories/paris/paris-sportifs-comparatif.jpg" allowfullscreen>>
+          </div>
+           <div class="embed-responsive embed-responsive-16by9">
+          <img class="embed-responsive-item" src=" https://images.ladepeche.fr/api/v1/images/view/5c3790ab3e454661ac177149/large/image.jpg" allowfullscreen>>
+          </div> 
+  {% endblock %}
+  

@@ -1,0 +1,106 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title %}SPORTRESULTATS{% endblock %}
+{% block affiche %}
+<div class="container card text-center" style="background-color: black">
+  <div class="card-body" style="background-image: url('{% static 'img/heading.jpg'%}');">
+    <h1 class="card-title" style="font-weight:bold; color: white">RESULTAT DES MATCHS DU JOUR</h1>
+    <h2 class="card-text">suivez le resultat des match en direct.</h2>
+  </div>
+</div>
+{% endblock %}
+
+
+{% block body %}
+
+<!-- Editable table -->
+<div class="card">
+  <h3 class="card-header text-center font-weight-bold text-uppercase py-4">MATCH DU JOUR</h3>
+  <div class="card-body">
+    <div id="table" class="table-editable">
+      <span class="table-add float-right mb-3 mr-2"><a href="https://1xbet26.com/fr/live/" class="text-success"><i
+            class="fas fa-plus fa-2x" aria-hidden="true"></i></a></span>
+      <table class="table table-bordered table-responsive-md table-striped text-center">
+        <thead>
+          <tr class="p-0">
+            <th class="text-center">HEURE</th>
+            <th class="text-center">EQUIPE 1</th>
+             <th class="text-center">SCORE</th>
+            <th class="text-center">EQUIPE 2</th>
+           
+           
+            
+          </tr>
+        </thead>
+        <tbody>
+        	{% for res in result %}
+          <tr class="p-0">
+          	
+          	 <td>
+              <span class="table-remove"><button type="button"
+                  class="btn btn-default btn-rounded btn-sm my-0">{{res.heure}}</button></span>
+            </td>
+           
+            <td class="pt-3-half" contenteditable="true">{{res.eqa}}</td>
+
+             <td>
+              <span class="table-remove"><button type="button"
+                  class="btn btn-danger btn-rounded btn-sm my-0">{{res.scors}}</button></span>
+            </td>
+
+            <td class="pt-3-half" contenteditable="true">{{res.eqb}}</td>
+            
+            <td class="pt-3-half">
+              <span class="table-up"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-up"
+                    aria-hidden="true"></i></a></span>
+              <span class="table-down"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-down"
+                    aria-hidden="true"></i></a></span>
+            </td>
+
+             <td>
+              <span class="table-remove"><button type="button"
+                  class="btn btn-success btn-rounded btn-sm my-0">parier</button></span>
+            </td>
+
+
+          </tr>
+   
+            </td>
+          </tr>
+           {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+  
+
+{% endblock %}
+
+  {% block pub %}
+          <!--Grid column-->
+
+        <!-- Video -->
+          <div class="embed-responsive embed-responsive-16by9">
+          <img class="embed-responsive-item" src="https://www.liveonscore.com/wp-content/uploads/2018/06/feature.image2_.png" allowfullscreen>>
+          </div>
+      <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/X4USsy7RWN8"
+          allowfullscreen></iframe>
+        </div>
+
+         <div class="embed-responsive embed-responsive-16by9">
+          <img class="embed-responsive-item" src="http://www.lesurfgagnant.com/images/stories/paris/paris-sportifs-comparatif.jpg" allowfullscreen>>
+          </div>
+      <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZQP7R6pfaXg"
+          allowfullscreen></iframe>
+        </div>
+
+         <div class="embed-responsive embed-responsive-16by9">
+          <img class="embed-responsive-item" src=" https://images.ladepeche.fr/api/v1/images/view/5c3790ab3e454661ac177149/large/image.jpg" allowfullscreen>>
+          </div>
+
+        
+      
+ {% endblock %}
